@@ -1,0 +1,28 @@
+package principal;
+
+import java.util.Scanner;
+
+public class problema1 {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+        int primeiroPar,segundoPar;
+        Scanner sc = new Scanner(System.in);
+
+        primeiroPar = sc.nextInt();
+        segundoPar = sc.nextInt();
+
+        do{
+
+            System.out.println(primeiroPar + segundoPar);
+
+            primeiroPar = sc.nextInt();
+            segundoPar = sc.nextInt();
+
+        }while(primeiroPar != 0 && segundoPar != 0);
+    }
+
+
+
+}

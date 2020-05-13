@@ -1,0 +1,46 @@
+package principal;
+
+import java.util.Scanner;
+
+public class problema3 {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+        Scanner sc = new Scanner(System.in);
+
+
+        System.out.println("Começou");
+        int t = sc.nextInt();
+        boolean primo = true;
+
+        for(int x = 0;x <t; x++)
+        {
+            System.out.println("digite um par");
+            int m = sc.nextInt();//n é maior que m
+            int n = sc.nextInt();
+
+            for(int y = m; y <= n; y++)//Checar o intervalo
+            {
+                primo = true;
+                for(int h = y-1; h > 1; h--)//Checar se é primo
+                {
+                    if(y%h == 0)
+                    {
+                        primo = false;
+                    }
+                }
+
+                if(primo == true)
+                {
+                    System.out.println(y);
+                }
+
+            }
+            System.out.println(" ");
+        }
+
+    }
+
+}
+

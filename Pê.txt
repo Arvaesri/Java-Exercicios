@@ -1,0 +1,36 @@
+package principal;
+
+import java.util.Scanner;
+
+public class problema4 {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+
+        Scanner sc = new Scanner(System.in);
+        String mensagem = sc.nextLine();
+        String mensagemDeco = "";
+
+        for(int x = 0;  x < mensagem.length()-2; x++)
+        {
+            if(mensagem.charAt(x) == 'p' && mensagem.charAt(x+1) != 'p')
+            {
+                mensagemDeco += mensagem.charAt(x+1);
+            }
+            else if(mensagem.charAt(x) == 'p' && mensagem.charAt(x+1) == 'p' && mensagem.charAt(x+2) != 'p')
+            {
+                mensagemDeco += 'p';
+            }
+            else if(mensagem.charAt(x) == ' ')
+            {
+                mensagemDeco += ' ';
+            }
+
+        }
+        mensagemDeco += mensagem.charAt(mensagem.length()-1);
+
+        System.out.println(mensagemDeco);
+    }
+
+}
